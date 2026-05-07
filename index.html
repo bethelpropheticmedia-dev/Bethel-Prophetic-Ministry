@@ -42,6 +42,11 @@
 	</head>
 	
     <body data-spy="scroll" data-offset="80">
+		<script>
+window.onload = function () {
+  document.getElementById("loader").style.display = "none";
+};
+</script>
 <script>
 function toggleText(btn){
     let moreText = btn.previousElementSibling.querySelector(".frontaboutmore-text");
