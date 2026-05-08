@@ -1434,6 +1434,25 @@ padding: 30px 50px;
   line-height: 1.6;
 }
 
+
+
+#indexframe{
+
+  width: 560px;
+  height: 315px;
+
+}
+
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  #indexframe{
+
+  width: 350px;
+  height: 150px;
+
+}
+}
 /* FORM */
 .uptestimony-form {
   flex: 1;
