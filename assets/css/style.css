@@ -3537,7 +3537,7 @@ text-transform: capitalize;
 
 
 .floating-counter{
-    position: fixed;
+    width: fit-content;
     bottom: 80px;
     right: 15px;
     z-index: 9999;
