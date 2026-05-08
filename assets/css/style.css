@@ -442,6 +442,11 @@ color:#fff;
 	position: relative;
 	z-index: 10;
 }
+@media (max-width: 900px) {
+    .bg-slide  #subscribe-button{
+       margin-top: 400px;
+    }
+}
 .bg-slide  #apply-button {
     padding: 12px 24px;
     font-size: 16px;
