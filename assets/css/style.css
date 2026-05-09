@@ -512,6 +512,12 @@ color:#fff;
     border-radius:60px;
     border: 1px solid maroon;
 }
+/* Smooth Floating Motion */
+@keyframes floatArrow{
+    0%{transform:translateY(0);}
+    50%{transform:translateY(-8px);}
+    100%{transform:translateY(0);}
+}
 
 /* Increase counter size */
 .statcounter img{
@@ -525,12 +531,15 @@ color:#fff;
     }
 
 }
-/* Smooth Floating Motion */
-@keyframes floatArrow{
-    0%{transform:translateY(0);}
-    50%{transform:translateY(-8px);}
-    100%{transform:translateY(0);}
+
+.visitmap{
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
 }
+
 
 
 .home_video{height: 750px;position:relative;}
