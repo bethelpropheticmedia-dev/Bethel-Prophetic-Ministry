@@ -19,7 +19,7 @@
         <meta property="og:url" content="bethelpropheticministries.org">
         <meta property="og:type" content="website">
 		<!-- SITE TITLE -->
-		
+	
         <link rel="icon" href="logo.png">			
 		<!-- Latest Bootstrap min CSS -->
 		<link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">		
@@ -49,7 +49,7 @@
 		  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
 		<![endif]-->
 
-      <script type="application/ld+json">
+		<script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "Organization",
@@ -58,7 +58,6 @@
   "logo": "https://bethelpropheticministries.org/logo.png"
 }
 </script>
-		
 	</head>
 	
     <body data-spy="scroll" data-offset="80">
@@ -266,7 +265,7 @@ function closePopupfellow() {
 				  </ul>
 				</nav>
 			  </div>
-			   <div class="col-6 d-inline-block d-xl-none ml-md-0 py-3" style="position: relative; top: 3px; left:50px;">
+			   <div class="col-6 d-inline-block d-xl-none ml-md-0 py-3" style="position: relative; top: 3px; left:100px;">
 			   <a href="#" class="site-menu-toggle js-menu-toggle float-right"><span class="icon-menu h3" style="font-size: 40px;color: white;"></span></a>
 			   </div>
 			</div>
@@ -288,41 +287,42 @@ data-bs-wrap="true">
             <a href="https://docs.google.com/forms/d/e/1FAIpQLSfxgOF-lJXWZMsaGmbGeEgoPhrmNBhlfZIfGkr7hYIuK9bskA/viewform"    target="_blank" 
    rel="noopener noreferrer" style="text-decoration: none; color: inherit;"><div class="bg-slide" style="background-image:url('assets/img/bg/Collegeslide.jpg');cursor: pointer;position: relative;z-index: 2;"></div></a>
         </div> -->
-		<div class="carousel-item">
-            <div class="bg-slide" style="background-image:url('assets/img/bg/webback2.jpg');">
-
-				<button id="apply-button"><a href="https://docs.google.com/forms/d/e/1FAIpQLSfxgOF-lJXWZMsaGmbGeEgoPhrmNBhlfZIfGkr7hYIuK9bskA/viewform" target="_blank" 
-   rel="noopener noreferrer">APPLY NOW</a></button> 
+		<div class="carousel-item active">
+            <div class="bg-slide" id="slideactive">
+<button id="subscribe-button" target="_blank" 
+   rel="noopener noreferrer"><a href="https://youtu.be/LZkxUz6l1D0?si=hD6P5D1XBZ4uI8cr" style="color: azure;" target="_blank" rel="noopener noreferrer">Watch on Youtube</a> </button> 
+				
 			</div>
         </div>
-			 <div class="carousel-item active">
-            <div class="bg-slide" style="background-image:url('https://img.youtube.com/vi/LZkxUz6l1D0/maxresdefault.jpg');">
-               
-				 <button id="subscribe-button" target="_blank" 
-   rel="noopener noreferrer"><a href="https://youtu.be/LZkxUz6l1D0?si=hD6P5D1XBZ4uI8cr" style="color: azure;" target="_blank" rel="noopener noreferrer">Watch on Youtube</a> </button> 
+		 <div class="carousel-item">
+            <div class="bg-slide" id="slideone">
+               <button id="apply-button"><a href="https://docs.google.com/forms/d/e/1FAIpQLSfxgOF-lJXWZMsaGmbGeEgoPhrmNBhlfZIfGkr7hYIuK9bskA/viewform" target="_blank" 
+   rel="noopener noreferrer">APPLY NOW</a></button> 
+				 
 			</div>
         </div>
         <div class="carousel-item">
-            <div class="bg-slide" style="background-image:url('assets/img/bg/webback4.jpg');justify-content:center;align-items:center;">
+            <div class="bg-slide" id="slidetwo" style="justify-content:center;align-items:center;">
 				 <button id="subscribe-button" onclick="window.open('https://www.youtube.com/@bethelpropheticministries8848?sub_confirmation=1', '_blank')"    target="_blank" 
    rel="noopener noreferrer">Subscribe To Our Channel</button> 
 			</div>
         </div>
 
         <div class="carousel-item">
-            <div class="bg-slide" style="background-image:url('https://img.youtube.com/vi/ev6u850vkuo/maxresdefault.jpg');">
+            <div class="bg-slide" id="slidethree">
 
 				 <button id="subscribe-button" ><a href="https://youtu.be/ev6u850vkuo?si=8GyD4CegVf7SBtoh" style="color: azure;" target="_blank" rel="noopener noreferrer">Watch on Youtube</a> </button> 
 			</div>
         </div>
-	
  <div class="carousel-item">
-            <div class="bg-slide" style="background-image:url('https://img.youtube.com/vi/YMfVnRV2rYk/maxresdefault.jpg');">
+            <div class="bg-slide"  id="slidefour">
 
 				 <button id="subscribe-button" target="_blank" 
    rel="noopener noreferrer"><a href="https://youtu.be/YMfVnRV2rYk?si=5s1fl3mTKBM3QA7U" style="color: azure;" target="_blank" rel="noopener noreferrer">Watch on Youtube</a> </button> 
 			</div>
         </div>
+
+		
 
     </div>
 
@@ -1072,12 +1072,12 @@ I heard a voice
 			</div>
 		</section> -->
 		<!-- END BLOG -->		
-		<div class="visitmap">
+		 <div class="visitmap">
 
 <script type='text/javascript' id='clustrmaps' src='//cdn.clustrmaps.com/map_v2.js?cl=d8d7d8&w=556&t=tt&d=IPf4V_L6mrGsRYFy-FfVf_NeJ-oauKogOTGT5sjKYww&co=651844'></script>
 
 
-		 </div>
+		 </div>	
 		<!-- CONTACT -->
 		<div id="contact" class="contact_area section-padding">
 			<div class="container">
@@ -1241,6 +1241,13 @@ Tamil Nadu- India</p>
 				</div>				
 			</div>
 		</div>
+<div class="floating-countertext">
+
+  <span class="counter-text" style="color: black;">Visitors</span>
+
+  
+
+</div>
 		<div class="floating-counter">
 
   <span class="counter-text" style="color: black;">Visitors</span>
