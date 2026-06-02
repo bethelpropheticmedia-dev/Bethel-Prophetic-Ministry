@@ -354,26 +354,65 @@ data-bs-wrap="true">
 		<section class="why_choose_area section-padding">
 			<div class="container">
 				<div class="section-title text-center">		
-						<h2>Hebrew Word of the Day</h2>
+						<h2>Today's God's Word</h2>
 						
 					</div>	
 				
 				<div class="row">
 					<div class="col-lg-6 col-sm-12 col-xs-12 wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.1s" data-wow-offset="0">
 						<div class="single_why_choose">
-							<h2>Secret of the second Hebrew letter beth</h2>
-							<p>בת hebrew word meaning | Bishop John F Aruldoss </p>
-							<a class="btn_one" href="https://youtube.com/shorts/9WRaqMQ-o4E?si=cRb9pKB0DQ15TaCS"  target="_blank" 
-   rel="noopener noreferrer">Watch on Youtube</a>
+							<h2>The Narrow Gate</h2>
+							<h4>Scripture:</h4>
+                            <p>Enter through the narrow gate. For wide is the gate and broad is the road that leads to destruction, and many enter through it.</p>
+							<p>Matthew 7:13</p>
+							<h4>Meditation:</h4>
+							<p>
+								Jesus Christ speaks of two paths before every person. One is the broad road—easy, popular, and attractive to the world. Many choose this path because it follows worldly desires and pleasures. Yet its destination is destruction.
+
+The other is the narrow gate—a path of faith, obedience, holiness, and commitment to God. Though it may be challenging and less traveled, it leads to eternal life and God's blessings.
+
+Today, God calls us to choose the narrow gate. Following Christ may not always be the easiest choice, but it is the path that leads to true peace, purpose, and everlasting life.
+
+							</p>
+							<h4>Life Application:</h4>
+							<p>
+								Choose God's way even when it is not the popular choice.
+Remain faithful to Christ during trials and challenges.
+Remember that the narrow path leads to eternal life and glory.
+							</p>
+							<h4>
+								Prayer:
+							</h4>
+							<p>
+								Heavenly Father, help me to walk through the narrow gate and follow Your ways. Give me strength to resist the distractions of the world and remain faithful to You. Lead me on the path that leads to eternal life. In Jesus' name, Amen.
+							</p>
+							<!-- <a class="btn_one" href="https://youtube.com/shorts/9WRaqMQ-o4E?si=cRb9pKB0DQ15TaCS"  target="_blank" 
+   rel="noopener noreferrer">Watch on Youtube</a> -->
 						</div>							
 					</div><!--- END COL -->	
 					<div class="col-lg-6 col-sm-12 col-xs-12 wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.1s" data-wow-offset="0">
 						<div class="single_why_choose_img">
 							<img 
-  src="assets/img/bg/hebrewp.png" 
+  src="assets/img/godsword/Mathhew7_13Eng.png" 
   class="img-fluid" 
-  alt="YouTube Thumbnail" style="height: 600px;width:400px"
+  alt="YouTube Thumbnail" style="height: 600px;width:400px;margin-top: 120px;"
 />
+<div class="action-buttons text-center mt-3">
+    <button class="btn btn-primary me-2" onclick="shareVerse()">
+        <i class="fa fa-share-alt"></i> Share
+    </button>
+
+    <button class="btn btn-danger me-2" onclick="likeVerse()">
+        <i class="fa fa-heart"></i> Like
+        <span id="likeCount">0</span>
+    </button>
+
+    <a href="assets/img/godsword/Mathhew7_13Eng.png"
+       download="Matthew7_13.png"
+       class="btn btn-success">
+        <i class="fa fa-download"></i> Download
+    </a>
+</div>
 						</div>							
 					</div><!--- END COL -->	
 				</div><!--- END ROW -->			
@@ -1266,7 +1305,39 @@ Tamil Nadu- India</p>
 
 </div>
 		<!-- END FOOTER -->	
+            <script>
 
+ async function shareVerse()  {
+    try {
+        const response = await fetch('assets/img/godsword/Mathhew7_13Eng.png');
+        const blob = await response.blob();
+
+        const file = new File(
+            [blob],
+            'Matthew7_13.png',
+            { type: 'image/png' }
+        );
+
+        if (navigator.canShare && navigator.canShare({ files: [file] })) {
+            await navigator.share({
+                title: "Today's God's Word",
+                text: "Matthew 7:13",
+                files: [file]
+            });
+        } else {
+            alert("Image sharing is not supported on this device.");
+        }
+    } catch (error) {
+        console.error(error);
+    }
+
+}
+
+function likeVerse() {
+    let count = document.getElementById("likeCount");
+    count.innerText = parseInt(count.innerText) + 1;
+}
+</script>
 		<!-- Latest jQuery -->
 			<script src="assets/js/jquery-1.12.4.min.js"></script>
 		<!-- Latest compiled and minified Bootstrap -->
