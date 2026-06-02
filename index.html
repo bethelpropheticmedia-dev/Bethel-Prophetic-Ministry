@@ -1307,32 +1307,24 @@ Tamil Nadu- India</p>
 		<!-- END FOOTER -->	
             <script>
 
- async function shareVerse()  {
-    try {
-        const response = await fetch('assets/img/godsword/Mathhew7_13Eng.png');
-        const blob = await response.blob();
+async function shareVerse() {
+    const shareUrl = window.location.href; // current page URL
 
-        const file = new File(
-            [blob],
-            'Matthew7_13.png',
-            { type: 'image/png' }
-        );
-
-        if (navigator.canShare && navigator.canShare({ files: [file] })) {
+    if (navigator.share) {
+        try {
             await navigator.share({
                 title: "Today's God's Word",
-                text: "Matthew 7:13",
-                files: [file]
+                text: "Matthew 7:13 - The Narrow Gate",
+                url: shareUrl
             });
-        } else {
-            alert("Image sharing is not supported on this device.");
+        } catch (err) {
+            console.log("Share cancelled");
         }
-    } catch (error) {
-        console.error(error);
+    } else {
+        navigator.clipboard.writeText(shareUrl);
+        alert("Link copied to clipboard!");
     }
-
 }
-
 function likeVerse() {
     let count = document.getElementById("likeCount");
     count.innerText = parseInt(count.innerText) + 1;
