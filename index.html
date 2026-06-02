@@ -368,8 +368,11 @@ data-bs-wrap="true">
   alt="YouTube Thumbnail" style="height: 600px;width:400px;margin-top: 120px;"
 />
 <div class="action-buttons text-center mt-3">
-    <button class="btn btn-primary me-2" onclick="shareVerse()">
+    <button class="btn btn-primary me-2" onclick="shareVerse()" id="sharemob">
         <i class="fa fa-share-alt"></i> Share
+    </button>
+	  <button class="btn btn-primary me-2" onclick="copyLink()" id="shareweb"  >
+        <i class="fa fa-share-alt"></i> Copy Link
     </button>
 
     <button class="btn btn-danger me-2" onclick="likeVerse()">
@@ -1308,19 +1311,59 @@ Tamil Nadu- India</p>
 		<!-- END FOOTER -->	
             <script>
 
-async function shareVerse() {
-    await navigator.share({
-        title: "Today's God's Word",
-        text: `The Narrow Gate
+function copyLink() {
+    const shareUrl =
+        window.location.origin +
+        window.location.pathname +
+        "#todays-word";
+		 const shareText =
+`The Narrow Gate
 
 Matthew 7:13
 
 Enter through the narrow gate. For wide is the gate and broad is the road that leads to destruction, and many enter through it.
 
-Read more: ${window.location.origin}${window.location.pathname}#todays-word`,
-        url: window.location.origin + window.location.pathname + "#todays-word"
-    });
+Read more: ${shareUrl}`;
+
+    navigator.clipboard.writeText(shareText)
+        .then(() => {
+            alert("Link copied to clipboard!");
+        })
+        .catch(err => {
+            console.error("Failed to copy:", err);
+        });
 }
+async function shareVerse() {
+    const shareUrl = window.location.origin +
+                     window.location.pathname +
+                     "#todays-word";
+
+    const shareText =
+`The Narrow Gate
+
+Matthew 7:13
+
+Enter through the narrow gate. For wide is the gate and broad is the road that leads to destruction, and many enter through it.
+
+Read more: ${shareUrl}`;
+
+    if (navigator.share) {
+        try {
+            await navigator.share({
+                title: "Today's God's Word",
+                text: shareText,
+                url: shareUrl
+            });
+        } catch (err) {
+            console.log(err);
+        }
+    } else {
+        // Desktop fallback
+        navigator.clipboard.writeText(shareText);
+        alert("Verse and link copied to clipboard!");
+    }
+}
+
 function likeVerse() {
     let count = document.getElementById("likeCount");
     count.innerText = parseInt(count.innerText) + 1;
