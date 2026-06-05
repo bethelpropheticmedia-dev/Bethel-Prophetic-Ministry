@@ -182,12 +182,12 @@ fieldset {
 }
 #slidetwo{
 
-  background-image: url('https://img.youtube.com/vi/8IjkOQcB3PI/maxresdefault.jpg');
+  background-image: url('../img/bg/webback6.png');
 }
 @media only screen and (max-width:768px) { 
 #slidetwo{
 
-  background-image: url('../img/bg/webback4.jpg');
+  background-image: url('../img/bg/mobback1.png');
 }
 }
 #slidethree{
