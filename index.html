@@ -9,7 +9,7 @@
 		<title>Bethel Prophetic Ministries</title>
 
         <meta name="description" content="Exodus 33:14,யாத்திராகமம் 33:14, Bethel Prophetic Ministries is dedicated to spreading the Gospel of Jesus Christ through powerful sermons, prophetic messages, live services, prayer support, and spiritual teachings by Bishop John F. Aruldoss.">
-         <meta name="keywords" content="Bethel Prophetic Ministries,Bethel Prophetic Ministry,யாத்திராகமம் 33:14, Bible Verse, Exodus 33:14,Bible Verse Tamil, Bishop John F Aruldoss, Prophetic Message, Christian Ministry, Tamil Sermon, Prayer Ministry">
+        <meta name="keywords" content="Bethel Prophetic Ministries,Bethel Prophetic Ministry,யாத்திராகமம் 33:14, Bible Verse, Exodus 33:14,Bible Verse Tamil, Bishop John F Aruldoss, Prophetic Message, Christian Ministry, Tamil Sermon, Prayer Ministry">
         <meta property="og:title" content="Bethel Prophetic Ministries">
         <meta property="og:description" content="Experience powerful prophetic messages, prayer, worship, and spiritual teachings.">	
 
@@ -287,12 +287,27 @@ data-bs-wrap="true">
             <a href="https://docs.google.com/forms/d/e/1FAIpQLSfxgOF-lJXWZMsaGmbGeEgoPhrmNBhlfZIfGkr7hYIuK9bskA/viewform"    target="_blank" 
    rel="noopener noreferrer" style="text-decoration: none; color: inherit;"><div class="bg-slide" style="background-image:url('assets/img/bg/Collegeslide.jpg');cursor: pointer;position: relative;z-index: 2;"></div></a>
         </div> -->
-		 <div class="carousel-item active">
+
+           <div class="carousel-item active">
             <div class="bg-slide"  id="slideevent">
 
 				 
 			</div>
         </div>
+
+<div class="carousel-item">
+	
+    <div class="bg-vslide">
+		<button type="button" id="audioBtn">
+    🔊
+</button>
+
+<video id="bgVideo" class="bg-video" autoplay  loop
+       src="/assets/videos/AD.mp4">
+</video>
+
+    </div>
+</div>
 		<div class="carousel-item">
             <div class="bg-slide" id="slideactive">
 <button id="subscribe-button" target="_blank" 
@@ -300,6 +315,11 @@ data-bs-wrap="true">
 				
 			</div>
         </div>
+
+         
+
+
+
 		 <div class="carousel-item">
             <div class="bg-slide" id="slideone">
                <button id="apply-button"><a href="https://docs.google.com/forms/d/e/1FAIpQLSfxgOF-lJXWZMsaGmbGeEgoPhrmNBhlfZIfGkr7hYIuK9bskA/viewform" target="_blank" 
@@ -1378,6 +1398,33 @@ function likeVerse() {
     let count = document.getElementById("likeCount");
     count.innerText = parseInt(count.innerText) + 1;
 }
+
+
+
+
+</script>
+
+
+
+
+
+
+<script>
+const video = document.getElementById('bgVideo');
+const btn = document.getElementById('audioBtn');
+video.muted = true;
+btn.addEventListener('click', function () {
+    video.muted = !video.muted; // Toggle mute/unmute
+
+    if (video.muted) {
+        btn.innerHTML = '🔇';
+        console.log('Muted');
+    } else {
+        video.volume = 1;
+        btn.innerHTML = '🔊';
+        console.log('Unmuted');
+    }
+});
 </script>
 
 		<!-- Latest jQuery -->
