@@ -210,6 +210,20 @@ fieldset {
   background-image: url('../img/bg/mobslide5.png');
 }
 }
+#slideevent{
+
+  background-image: url('../img/bg/WebPoster.jpg');
+}
+@media only screen and (max-width:768px) { 
+#slideevent{
+
+  background-image: url('../img/bg/Mobposter.jpg');
+}
+}
+
+
+
+
 .status-mes h4 {
 color: #f7f7f7;
 position:relative;
