@@ -110,7 +110,20 @@ function openPopupfellow() {
 function closePopupfellow() {
   document.getElementById("bethelpopupfellow").style.display = "none";
 }
+function openPopupimage() {
+  document.getElementById("bethelpopupimage").style.display = "flex";
+}
 
+function closePopupimage() {
+  document.getElementById("bethelpopupimage").style.display = "none";
+}
+function openPopupimagetam() {
+  document.getElementById("bethelpopupimagetam").style.display = "flex";
+}
+
+function closePopupimagetam() {
+  document.getElementById("bethelpopupimagetam").style.display = "none";
+}
 </script>
 
 
@@ -308,6 +321,7 @@ data-bs-wrap="true">
 
     </div>
 </div> -->
+
 		<div class="carousel-item active">
             <div class="bg-slide" id="slideactive">
 <button id="subscribe-button" target="_blank" 
@@ -417,7 +431,7 @@ data-bs-wrap="true">
 					</div><!--- END COL -->	
 						<div class="col-lg-6 col-sm-12 col-xs-12 wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.1s" data-wow-offset="0">
 						<div class="single_why_choose">
-							<h2>நிந்தையை புரட்டிப்போட்டேன்</h2>
+							<h2>உன்னோடு இருப்பேன்</h2>
 							
 							<h4>வேதாகம வசனம்:</h4>
                             <p>"இன்று எகிப்தின் நிந்தையை உங்கள்மேல் இராதபடிக்குப் புரட்டிப்போட்டேன்"</p>
@@ -451,7 +465,39 @@ data-bs-wrap="true">
 				</div><!--- END ROW -->			
 			</div><!--- END CONTAINER -->		
 		</section>
-         
+         <section class="why_choose_area section-padding" id="prophetic-word">
+			<div class="container">
+				<div class="section-title text-center">		
+						<h2>Prophetic Spritual Training Course</h2>
+						
+					</div>	
+				
+				<div class="row">
+					
+					<div class="col-lg-6 col-sm-12 col-xs-12 wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.1s" data-wow-offset="0">
+						<div class="single_why_choose_img">
+							<img 
+  src="assets/img/bg/webback7.png" 
+  class="img-fluid" 
+  alt="YouTube Thumbnail" style="height:100%;width:100%;margin-top: 120px;"
+/><i class="ti-eye" onclick="openPopupimage()"> </i>
+
+						</div>							
+					</div><!--- END COL -->	
+						
+						<div class="col-lg-6 col-sm-12 col-xs-12 wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.1s" data-wow-offset="0">
+						<div class="single_why_choose_img">
+							<img 
+  src="assets/img/bg/webback8.png" 
+  class="img-fluid" 
+  alt="YouTube Thumbnail" style="height:100%;width:100%;margin-top: 120px;"
+/><i class="ti-eye" onclick="openPopupimagetam()"> </i>
+
+						</div>							
+					</div><!--- END COL -->	
+				</div><!--- END ROW -->			
+			</div><!--- END CONTAINER -->		
+		</section>
 
 <section class="frontabout-section">
     <div class="frontaboutcontainer">
@@ -602,6 +648,54 @@ data-bs-wrap="true">
 </div>
 <!-- close pastorpopup -->
 <!-- courserpopup -->
+ <div class="bethelpopup-overlay" id="bethelpopupimage">
+  
+  <div class="bethelpopup-box">
+    
+    <!-- Close Button -->
+    <span class="bethelclose-btn" onclick="closePopupimage()">&times;</span>
+
+    <!-- Content -->
+    <section class="college-section" id="pptraining" style="scroll-margin-top: 100px;">
+  <div class="college-container">
+
+<img 
+  src="assets/img/bg/webback7.png" 
+  class="img-fluid" 
+  alt="YouTube Thumbnail" style="height:100%;width:100%;margin-top: 120px;"
+/>
+   
+  </div>
+</section>
+
+
+  </div>
+
+</div>
+ <div class="bethelpopup-overlay" id="bethelpopupimagetam">
+  
+  <div class="bethelpopup-box">
+    
+    <!-- Close Button -->
+    <span class="bethelclose-btn" onclick="closePopupimagetam()">&times;</span>
+
+    <!-- Content -->
+    <section class="college-section" id="pptraining" style="scroll-margin-top: 100px;">
+  <div class="college-container">
+
+<img 
+  src="assets/img/bg/webback8.png" 
+  class="img-fluid" 
+  alt="YouTube Thumbnail" style="height:100%;width:100%;margin-top: 120px;"
+/>
+   
+  </div>
+</section>
+
+
+  </div>
+
+</div>
 <div class="bethelpopup-overlay" id="bethelpopupcourse">
   
   <div class="bethelpopup-box">
