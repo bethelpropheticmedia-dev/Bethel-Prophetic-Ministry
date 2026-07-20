@@ -74,6 +74,9 @@ function toggleText(btn){
     }
 }
 
+
+
+
 function openPopuppastor() {
   document.getElementById("bethelpopup").style.display = "flex";
 }
@@ -478,6 +481,35 @@ data-bs-wrap="true">
 				</div><!--- END ROW -->			
 			</div><!--- END CONTAINER -->		
 		</section>
+
+          <section class="bible-carousel">
+
+    <h2 class="csection-title">⚠️ எதிரி நேரடியாக வருவதில்லை...</h2>
+
+    <div class="pscarousel-wrapper">
+
+        <button class="psnav psprev">&#10094;</button>
+
+        <div class="pscarousel">
+
+            <img src="./assets/img/godsword/s1.png" alt="Bible Verse 1" >
+            <img src="./assets/img/godsword/s2.png" alt="Bible Verse 2">
+            <img src="./assets/img/godsword/s3.png" alt="Bible Verse 3">
+            <img src="./assets/img/godsword/s4.png" alt="Bible Verse 4">
+            <img src="./assets/img/godsword/s5.jpg.jpeg" alt="Bible Verse 5">
+			<img src="./assets/img/godsword/s6.png" alt="Bible Verse 5">
+
+        </div>
+
+        <button class="psnav psnext">&#10095;</button>
+
+    </div>
+
+</section>
+
+
+
+
          <section class="why_choose_area section-padding" id="prophetic-word">
 			<div class="container">
 				<div class="section-title text-center">		
@@ -1538,7 +1570,46 @@ function likeVerse() {
     count.innerText = parseInt(count.innerText) + 1;
 }
 
+const carousel = document.querySelector(".pscarousel");
+const slides = document.querySelectorAll(".pscarousel img");
 
+let current = 0;
+
+document.querySelector(".psnext").onclick = () => {
+
+    if(current < slides.length-1){
+
+        current++;
+
+        carousel.scrollTo({
+
+            left:current*carousel.clientWidth,
+
+            behavior:"smooth"
+
+        });
+
+    }
+
+};
+
+document.querySelector(".psprev").onclick = () => {
+
+    if(current > 0){
+
+        current--;
+
+        carousel.scrollTo({
+
+            left:current*carousel.clientWidth,
+
+            behavior:"smooth"
+
+        });
+
+    }
+
+};
 
 
 </script>
