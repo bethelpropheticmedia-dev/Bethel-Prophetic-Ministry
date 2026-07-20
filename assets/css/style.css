@@ -212,7 +212,7 @@ fieldset {
 }
 #slideevent{
 
-  background-image: url('../img/bg/WebPoster.jpg');
+  background-image: url('../img/bg/webback12.png');
 }
 @media only screen and (max-width:768px) { 
 #slideevent{
@@ -3862,4 +3862,136 @@ position: relative;
 #shareweb{
   display: none;
 }
+}
+
+.bible-carousel{
+
+    max-width:1100px;
+    margin:80px auto;
+    padding:0 20px;
+
+}
+
+.csection-title{
+
+    text-align:center;
+    font-size:2rem;
+    margin-bottom:30px;
+    color:#222;
+
+}
+
+.pscarousel-wrapper{
+
+    position:relative;
+
+}
+
+.pscarousel{
+
+    display:flex;
+
+    overflow-x:auto;
+
+    scroll-snap-type:x mandatory;
+
+    scroll-behavior:smooth;
+
+    gap:20px;
+
+    scrollbar-width:none;
+
+}
+
+.pscarousel::-webkit-scrollbar{
+
+    display:none;
+
+}
+
+.pscarousel img{
+
+    flex:0 0 100%;
+
+    width:100%;
+    
+
+    border-radius:20px;
+
+    object-fit:cover;
+
+    scroll-snap-align:start;
+
+    aspect-ratio:5/5;
+
+    box-shadow:0 15px 35px rgba(0,0,0,.15);
+
+}
+
+.psnav{
+
+    position:absolute;
+
+    top:50%;
+
+    transform:translateY(-50%);
+
+    width:48px;
+
+    height:48px;
+
+    border:none;
+
+    border-radius:50%;
+
+    background:white;
+
+    box-shadow:0 8px 25px rgba(0,0,0,.15);
+
+    cursor:pointer;
+
+    font-size:22px;
+
+    z-index:10;
+
+}
+
+.psprev{
+
+    left:-24px;
+
+}
+
+.psnext{
+
+    right:-24px;
+
+}
+
+@media(max-width:768px){
+
+    .csection-title{
+
+        font-size:1.5rem;
+
+    }
+
+    .pscarousel{
+
+        gap:12px;
+
+    }
+
+    .pscarousel img{
+
+        border-radius:12px;
+
+    }
+
+    .psnav{
+
+        display:none;
+
+    }
+
 }
