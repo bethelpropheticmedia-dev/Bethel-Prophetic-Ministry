@@ -164,7 +164,7 @@ fieldset {
 
   background-image: url('https://img.youtube.com/vi/LZkxUz6l1D0/maxresdefault.jpg');
 }
-@media only screen and (max-width:768px) { 
+@media only screen and (max-width:1768px) { 
 #slideactive{
 
   background-image: url('../img/bg/mobslide1.png');
@@ -174,17 +174,17 @@ fieldset {
 
   background-image: url('../img/bg/webback2.jpg');
 }
-@media only screen and (max-width:768px) { 
+@media only screen and (max-width:1768px) { 
 #slideone{
 
-  background-image: url('../img/bg/webback2.jpg');
+  background-image: url('../img/bg/slidethreemob.jpg');
 }
 }
 #slidetwo{
 
   background-image: url('../img/bg/webback6.png');
 }
-@media only screen and (max-width:768px) { 
+@media only screen and (max-width:1768px) { 
 #slidetwo{
 
   background-image: url('../img/bg/mobback1.png');
@@ -195,7 +195,7 @@ height: 941px;
 
   background-image: url('../img/bg/pcweb.png');
 }
-@media only screen and (max-width:768px) { 
+@media only screen and (max-width:1768px) { 
 #slidethree{
 
   background-image: url('../img/bg/pcmob.png');
@@ -205,7 +205,7 @@ height: 941px;
 
   background-image: url('https://img.youtube.com/vi/YMfVnRV2rYk/maxresdefault.jpg');
 }
-@media only screen and (max-width:768px) { 
+@media only screen and (max-width:1768px) { 
 #slidefour{
 
   background-image: url('../img/bg/mobslide5.png');
@@ -215,7 +215,7 @@ height: 941px;
 
   background-image: url('../img/bg/webback12.png');
 }
-@media only screen and (max-width:768px) { 
+@media only screen and (max-width:1768px) { 
 #slideevent{
 
   background-image: url('../img/bg/Mobposter.jpg');
