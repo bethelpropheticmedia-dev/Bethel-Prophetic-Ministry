@@ -193,12 +193,12 @@ fieldset {
 #slidethree{
 height: 941px;
 
-  background-image: url('../img/bg/pcweb.png');
+  background-image: url('../img/bg/Miracle\ Evening.jpg');
 }
 @media only screen and (max-width:1768px) { 
 #slidethree{
 
-  background-image: url('../img/bg/pcmob.png');
+  background-image: url('../img/bg/Miracle\ Evening_mob.jpg');
 }
 }
 #slidefour{
