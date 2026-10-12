@@ -193,12 +193,12 @@ fieldset {
 #slidethree{
 height: 941px;
 
-  background-image: url('../img/bg/Miracle\ Evening.jpg');
+  background-image: url('https://img.youtube.com/vi/j2l_qn7M1lY/maxresdefault.jpg');
 }
 @media only screen and (max-width:1768px) { 
 #slidethree{
 
-  background-image: url('../img/bg/Miracle\ Evening_mob.jpg');
+  background-image: url('../img/bg/mobconf.png');
 }
 }
 #slidefour{
