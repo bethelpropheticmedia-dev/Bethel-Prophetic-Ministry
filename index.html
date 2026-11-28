@@ -1528,12 +1528,16 @@ Tamil Nadu- India</p>
 		<!-- END FOOTER -->	
             <script>
 
-function copyLink() {
+async function copyLink() {
     const shareUrl =
         window.location.origin +
         window.location.pathname +
         "#todays-word";
-		 const shareText =
+
+    const imageUrl = window.location.origin +
+        "/assets/img/godsword/verse.jpg";
+
+    const shareText =
 `இளைப்படைந்தவனுக்கு சமயத்திற்கேற்ற வார்த்தை சொல்ல நான் அறியும்படிக்கு, கர்த்தராகிய ஆண்டவர் எனக்குக் கல்விமானின் நாவைத் தந்தருளினார்;
 
 ஏசாயா 50 : 4
@@ -1543,13 +1547,35 @@ function copyLink() {
 
 Read more: ${shareUrl}`;
 
-    navigator.clipboard.writeText(shareText)
-        .then(() => {
-            alert("Link copied to clipboard!");
-        })
-        .catch(err => {
-            console.error("Failed to copy:", err);
-        });
+    try {
+        const response = await fetch(imageUrl);
+        const imageBlob = await response.blob();
+
+        const htmlContent = `
+            <div>
+                <img src="${imageUrl}">
+                <p>${shareText.replace(/\n/g, "<br>")}</p>
+            </div>
+        `;
+
+        await navigator.clipboard.write([
+            new ClipboardItem({
+                "text/plain": new Blob([shareText], {
+                    type: "text/plain"
+                }),
+                "text/html": new Blob([htmlContent], {
+                    type: "text/html"
+                }),
+                "image/jpeg": imageBlob
+            })
+        ]);
+
+        alert("Image and text copied to clipboard!");
+
+    } catch (err) {
+        console.error("Failed to copy:", err);
+        alert("Failed to copy image and text.");
+    }
 }
 async function shareVerse() {
     const shareUrl = window.location.origin +
