@@ -182,12 +182,12 @@ fieldset {
 }
 #slidetwo{
 
-  background-image: url('../img/bg/webback6.png');
+  background-image: url('../img/bg/webback6.jpg');
 }
 @media only screen and (max-width:1768px) { 
 #slidetwo{
 
-  background-image: url('../img/bg/mobback1.png');
+  background-image: url('../img/bg/mobback6.jpg');
 }
 }
 #slidethree{
